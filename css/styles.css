@@ -926,7 +926,6 @@ user-select: none;
 
 .agreement-check::before {
     content: ' ';
-    display: inline-block;
     margin-right: 8px;
     min-width: 16px;
     min-height: 15px;
