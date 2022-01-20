@@ -921,7 +921,7 @@ user-select: none;
   user-select: none;
   display: flex;
   align-items: center;
-  justify-items: center;  
+  justify-content: center;  
 }
 
 .agreement-check::before {
