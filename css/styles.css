@@ -908,6 +908,79 @@ user-select: none;
   padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
+  margin: -1px;  
+}
+
+.agreement-link {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.agreement-check {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-items: center;  
+}
+
+.agreement-check::before {
+    content: ' ';
+    display: inline-block;
+    margin-right: 8px;
+    min-width: 16px;
+    min-height: 15px;
+    background-origin: border-box;
+    background-size: cover;
+    cursor: pointer;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-color);
+    border-radius: 4px; 
+    margin-right: 8px;
+    transition: background-image 250ms var(--cubic);    
+}
+
+.checkbox:checked ~ .agreement-check::before {
+  background-image: url("../images/iconcheck.svg");
+  border: none;  
+}
+
+.icon-check {
+  width: 11px;
+  height: 8px;
+}
+
+/* .agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+.checkbox-square {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 4px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-origin: border-box;
+}
+
+.checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -924,7 +997,7 @@ user-select: none;
 .icon-check {
   width: 11px;
   height: 8px;
-}
+} */
 
 .submit {
   display: block;
@@ -968,6 +1041,7 @@ margin-left: 93px;
   height: 50px;
   border-radius: 4px;
   padding: 10px 28px;
+  margin-left: 12px;
 
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -979,8 +1053,7 @@ margin-left: 93px;
   letter-spacing: 0.06em;
   color: var(--main-background);
 
-  margin-left: 12px;
-
+  cursor: pointer;
 }
 
 .subscribe-icon {
